@@ -1,77 +1,68 @@
-body
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* images display row format */
 
-.images
-{
-list-style-type: none;
-display: flex;
-flex-flow: row wrap;
+.images {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 /* image size and background color */
 
-.images img
-{
-    width: 100%;
-    height: 200px;
-    border-radius: 6px;
-    object-fit: cover;
- }
+.images img {
+  width: 100%;
+  height: 200px;
+  border-radius: 6px;
+  object-fit: cover;
+}
 
-.images li{
+.images li {
   position: relative;
-  width: calc(100%/4 - 16px);
+  width: calc(100% / 4 - 16px);
   margin-right: 16px;
   margin-bottom: 16px;
 }
 
 /* tooltip effects */
 
-.folder
-{
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    color: #fff;
-    
+.folder {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  color: #fff;
 }
 
- .tooltiptext {
+.tooltiptext {
   visibility: hidden;
   background-color: black;
   color: #fff;
   text-align: center;
   border-radius: 6px;
   padding: 4px 18px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   position: absolute;
   z-index: 1;
   right: 24px;
   bottom: -4px;
 }
 
-
-
 /* hover effects */
 
-.images li img:hover
-{
-box-shadow: 0 0 5px #aaaaaa;
+.images li img:hover {
+  box-shadow: 0 0 5px #aaaaaa;
 }
 
 .folder:hover .tooltiptext {
   visibility: visible;
-} 
+}
 
-.folder .tooltiptext::after
- {
+.folder .tooltiptext::after {
   content: "";
   position: absolute;
   top: 8px;
@@ -81,26 +72,24 @@ box-shadow: 0 0 5px #aaaaaa;
   border-color: transparent transparent transparent black;
 }
 
-
 /* modelbox styles */
 
 .dialogbox {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(0,0,0,0.6); 
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
   cursor: pointer;
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
-  animation-duration: 0.4s
-
+  animation-duration: 0.4s;
 }
 .dialogboxcontent {
   background-color: #fefefe;
@@ -110,7 +99,6 @@ box-shadow: 0 0 5px #aaaaaa;
   width: 70%;
   height: 70%;
   position: relative;
-  
 }
 .close {
   color: #aaaaaa;
@@ -123,53 +111,64 @@ box-shadow: 0 0 5px #aaaaaa;
   line-height: 1;
 }
 
-.imageholder
- {
+.imageholder {
   display: flex;
   width: 100%;
   height: 70%;
   justify-content: center;
   margin-top: 48px;
-  }
-
+}
 
 /* animation of popup */
 
 @-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
-  to {top:0; opacity:1}
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 @keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* swipper styles */
+.swiper-container {
+  width: 600px;
+  height: 300px;
 }
 
 /* responsive for tablet device */
 
 @media only screen and (max-width: 768px) {
-   
-    .images li{
-      position: relative;
-      width: calc(100%/2 - 16px);
-      margin-right: 16px;
-    }
+  .images li {
+    position: relative;
+    width: calc(100% / 2 - 16px);
+    margin-right: 16px;
   }
+}
 
-  /* responsive for small devices like mobile and others below tablet */
+/* responsive for small devices like mobile and others below tablet */
 
-  @media only screen and (max-width:600px){
-    .images li{
-      position: relative;
-      width: calc(100% - 16px);
-      margin-right: 16px;
-    }
-    .dialogboxcontent {
-      width: 85%;
-      height: 35%;
+@media only screen and (max-width: 600px) {
+  .images li {
+    position: relative;
+    width: calc(100% - 16px);
+    margin-right: 16px;
   }
-
+  .dialogboxcontent {
+    width: 85%;
+    height: 35%;
   }
-
-
-  
+}
